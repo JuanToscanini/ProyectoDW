@@ -1,0 +1,779 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Index */
+/* header */
+a {
+    text-decoration: none;
+}
+
+.logoMessi {
+    height: 100px;
+}
+
+.letraBlanca {
+    color: beige;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenIndexBanner {
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    display: flex;
+    width: 100%;
+    justify-content: flex;
+    justify-content: center;
+}
+
+.titulosindex {
+    display: inline-block;
+    padding: 50px;
+    font-size: 30px;
+    border-radius: 0%;
+}
+
+.titulos {
+    width: 100%;
+    background-color: #D3CCE3;
+    background-image: linear-gradient(135deg, #D3CCE3 0%, #E9E4F0 100%);
+    display: flex;
+    flex-direction: row;
+}
+
+.titulos li {
+    height: 20px;
+    display: inline-block;
+    padding: 45px;
+    margin-left: 130px;
+    font-size: 20px;
+}
+
+.fotobannerindex {
+    background-size: cover;
+}
+
+li:hover {
+    transform: scale(1.2);
+}
+
+li a:after {
+    content: '';
+    position: relative;
+    background-color: rgb(9, 153, 215);
+    height: 3px;
+    width: 0;
+    display: block;
+    transition: 0.3s;
+}
+
+a:hover:after {
+    color: rgb(9, 153, 215);
+    width: 100%;
+}
+
+/* fin header */
+/* footer */
+#footer {
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    border-top: solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.redSocial {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    height: 4vh;
+}
+
+
+/* fin footer */
+/* Body */
+.subtitulo {
+
+    margin-bottom: 20px;
+    color: black;
+    font-size: 30px;
+}
+
+.cuerpo {
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Fotos 1 */
+.indexfotosinfo {
+    background-image: url("../img/fondo.jpg");
+    background-position: center;
+    width: 100%;
+}
+
+.fotos1 {
+    grid-area: div1;
+    display: flex;
+    columns: raw;
+    padding-left: 40px;
+}
+
+.fotos2 {
+    grid-area: div2;
+    display: flex;
+    columns: raw;
+    padding-left: 40px;
+}
+
+.fotos {
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+    padding: 1px;
+}
+
+#grid_container_fotos_index {
+    display: grid;
+    row-gap: 5px;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "div1"
+        "div2   ";
+}
+
+/* fin Fotos 1  */
+/* texto como jugador*/
+
+.textoPrincipalIndex {
+    padding: 2%;
+    font-style: normal;
+}
+
+/* texto info personal */
+.infopersonal {
+    padding: 1%;
+}
+
+/* Videos Index */
+.videosIndex {
+    padding-left: 20%;
+}
+
+.galeriaFotos {
+    color: white;
+}
+
+/* fin body */
+/* fin index */
+/* Seleccion Nacional */
+.tituloArgentina {
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.subtituloArgentina {
+    padding: 50px;
+}
+
+.messiArgentina {
+    background-image: linear-gradient(135deg, #465EFB 0%, #3B2667 100%);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.messiArgentinaseleccion {
+    width: 400px;
+    filter: brightness(90%);
+}
+
+.messiArgentinaseleccion2 {
+    width: 250px;
+}
+
+.textoSeleccion {
+    padding: 160px;
+    font-size: 20px;
+}
+
+.info {
+    padding: 50px;
+}
+
+.infogeneral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 50px;
+}
+
+.imagenInfoGeneral {
+    padding-top: 50px;
+    height: 300px;
+}
+
+/*  */
+
+.informacionTextoSeleccion {
+    font-size: 15px;
+    padding-right: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.copaAmerica {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.tituloCopaAmerica {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel {
+    background-image: linear-gradient(135deg, #465EFB 0%, #3B2667 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.carouselFoto {
+    height: 800px;
+}
+
+.videoCopaAmerica {
+    height: 300px;
+    width: 1500px;
+    padding: 30px;
+}
+
+/*  */
+.copaDelMundo {
+    height: 400px;
+}
+
+.fotocol {
+    display: flex;
+    justify-content: center;
+}
+
+/* clubes */
+.equipo {
+    font-size: 50px;
+    font-style: italic;
+}
+
+.messiClub1 {
+    height: 300px;
+}
+
+.messiClub2 {
+    height: 300px;
+}
+
+.messiClub3 {
+    height: 400px;
+}
+
+.columna2Barca img {
+    height: 638px;
+}
+
+.columna2Barca {
+    justify-content: end;
+}
+
+.columnaTextoBarca {
+    font-size: 20px;
+}
+
+.messinewellscomienzo {
+    height: 300px;
+}
+
+.messijoven {
+    height: 400px;
+}
+
+.messiFotosClubesBarca {
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+
+.barcaTexto {
+    display: flex;
+    flex-direction: row;
+}
+
+.barcaTexto p {
+    padding: 5%;
+}
+
+.tituloEquipo {
+
+    padding-top: 5%;
+}
+
+/* */
+.messiParisFirma {
+    height: 450px;
+}
+
+.messijugandopsg {
+    height: 450px;
+}
+
+/* TRAYECTORIA */
+.tituloClubes {
+    font-size: 20px;
+}
+
+.tituloSeleccion {
+    font-size: 20px;
+}
+
+.tituloPersonales {
+    font-size: 20px;
+}
+
+/* SECCION CONTACTO */
+
+.contactotitulo {
+    text-align: center;
+}
+
+.contactoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formContacto {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactoTitles {
+    font-weight: bolder;
+}
+
+.inputsForm {
+    border-radius: 10px;
+}
+
+.buttonForm {
+    transition-duration: 0.4s;
+    border-radius: 10px;
+    border: solid black 1px;
+    padding: 5px;
+    margin: 3px;
+}
+
+.buttonForm:hover {
+    background-color: #4a7cdf;
+    /* Green */
+    color: white;
+}
+
+/*grid index 1 */
+.quienEs {
+    grid-area: quien;
+}
+
+.texto1jugador {
+    grid-area: textojugadoruno;
+}
+
+.actualidad {
+    grid-area: actualidad;
+}
+
+.texto2jugador {
+    grid-area: textojugadordos;
+}
+
+.textoJugador {
+    height: 500px;
+    border-bottom: 4px solid whitesmoke;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "quien"
+        "textojugadoruno"
+        "actualidad"
+        "textojugadordos";
+}
+
+/* grid index  3 */
+.infoPersona {
+    grid-area: textoMessiPersonal1;
+}
+
+.infoPersona2 {
+    grid-area: textoMessiPersonal2;
+    display: flex;
+    justify-content: center;
+}
+
+.messiFamilia {
+    grid-area: fotoPersonal;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.messiFamiliaImg {
+    height: 600px;
+    padding: 5%
+}
+
+.textoSobreEl {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        " textoMessiPersonal1 textoMessiPersonal1"
+        "textoMessiPersonal2 fotoPersonal";
+    row-gap: 1px;
+    border-top: 4px solid whitesmoke;
+
+}
+
+/* grid index 4 videos */
+.videostitulo {
+    grid-area: titulovideo;
+    height: 20px;
+}
+
+.videosIndex {
+    grid-area: videos;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    column-gap: 5px;
+    padding: 5px;
+}
+
+.videosGrid {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "titulovideo"
+        "videos";
+}
+
+/*  */
+/*  */
+/*  */
+/* grid clubes.html */
+.equipos1 {
+    grid-area: tituloequipo;
+}
+
+.equipos2 {
+    grid-area: equipostres;
+    display: flex;
+    justify-content: center;
+}
+
+.equipos2 ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.equipos2 ul li {
+    display: flex;
+    justify-content: center;
+    flex-direction: space-around;
+    padding-right: 150px;
+    color: whitesmoke;
+}
+
+.grid_listaEquipos {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas:
+        "tituloequipo tituloequipo"
+        "equipostres equipostres";
+    background-image: url("../img/fondo.jpg");
+    background-position: center;
+    width: 100%;
+}
+
+.equiposClass {
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+.fotonewells1 {
+    padding-left: 200px;
+}
+
+.newellsTitulo {
+    margin: auto;
+}
+
+.infonewells {
+    margin: auto;
+    padding-top: 100px;
+}
+
+/*  */
+/* RESPONSIVE */
+@media screen and (max-width:425px) {
+    #headerindex {
+        grid-area: headerindex;
+    }
+
+    #main_index {
+        grid-area: mainindex;
+    }
+
+    #footer {
+        grid-area: footerindex;
+        padding-bottom: 2%;
+    }
+
+    #grid_container_index {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "headerindex"
+            "mainindex"
+            "footerindex";
+    }
+
+    /*index 1 */
+    .textoJugador {
+        justify-content: center;
+        width: 100%;
+        height: 600px;
+    }
+
+    .fotos {
+        height: 250px;
+        margin: 0%;
+        width: 250px;
+    }
+
+    .desaparecer {
+        display: none;
+    }
+
+    .indexfotosinfo {
+        width: 100%;
+        height: 700px;
+        margin: 0%;
+    }
+
+    #grid_container_fotos_index {
+        margin: 0%;
+        justify-content: center;
+        padding: 10px;
+        height: 600px;
+    }
+
+    /* index 3 */
+    .messiFamilia {
+        grid-area: messifotofamilia;
+    }
+
+    .messiFamiliaImg {
+        height: 300px;
+        width: 300px;
+    }
+
+    .textoSobreEl {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            " textoMessiPersonal1"
+            "textoMessiPersonal2"
+            "messifotofamilia";
+        width: 100%;
+    }
+
+    .videosGrid {
+        width: 100%;
+    }
+
+    .video3 {
+        display: none;
+    }
+
+    .videosIndex {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    /* TRAYECTORIA */
+    .carouseltrayectoria {
+        width: 100%;
+    }
+
+    .carouselfotoTrayectoria {
+        height: 200px;
+    }
+
+    /* CLUBES */
+    .grid_listaEquipos {
+        width: 426px;
+    }
+
+    .clubesTituloInicio {
+        width: 300px;
+    }
+
+    .gridClubesNewells {
+        width: 400px;
+    }
+
+    .textoNewells {
+        font-size: 15px;
+    }
+
+    .infonewells {
+        padding-top: 10px;
+    }
+
+    .equipo {
+        font-size: 20px;
+        width: 100px;
+        margin: 0px;
+    }
+
+    .newellsDiv {
+        flex-direction: column;
+    }
+
+    .messiClub2 {
+        height: 200px;
+    }
+
+    .messiClub1 {
+        height: 200px;
+    }
+
+    .textoBarcaparte1 {
+        width: 300px;
+        padding: 0px;
+    }
+
+    .textoBarcelona {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .barcaTexto {
+        width: 300px;
+        padding: 0px;
+    }
+
+    .barcaTexto p {
+        padding: 0px;
+    }
+
+    .columnaTextoBarca {
+        font-size: 15px;
+    }
+
+    .containerparis {
+        flex-direction: column;
+    }
+
+    .messijugandopsg {
+        height: 200px;
+    }
+
+    .messiParisFirma {
+        height: 200px;
+    }
+
+    .fotosparis {
+        display: flex;
+        flex-direction: row;
+        padding-left: 50px;
+    }
+
+    .parisTitulo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .texotParis {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    /* SELECCION */
+    .messiArgentina {
+        flex-direction: column;
+    }
+
+    .subtituloArgentina {
+        padding: 0;
+        padding-top: 10px;
+        margin: auto;
+    }
+
+    .textoSeleccion {
+        padding: 30px;
+        font-size: 17px;
+    }
+
+    .messiArgentinaseleccion {
+        margin: auto;
+    }
+
+    .informacionTextoSeleccion {
+        padding: 0;
+    }
+
+    .imagenInfoGeneral {
+        width: 400px;
+    }
+
+    .info {
+        padding-bottom: 10px;
+    }
+
+    .carouselSeleccion {
+        width: 400px;
+        margin: auto;
+        height: 600px;
+    }
+
+    .carouselFotoSeleccion {
+        height: 600px;
+        width: 400px;
+    }
+
+    /*  */
+}
