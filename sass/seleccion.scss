@@ -1,11 +1,13 @@
-@mixin size ($alto, $ancho,) {
+@mixin size ($alto, $ancho, ) {
     height: $alto;
     width: $ancho;
 }
-.cuerpo{
-animation-name: fade-in;
-animation-duration: 1s;
+
+.cuerpo {
+    animation-name: fade-in;
+    animation-duration: 1s;
 }
+
 .info {
     padding: 50px;
 
@@ -48,7 +50,7 @@ animation-duration: 1s;
 
     .videoCopaAmerica {
         padding: 30px;
-        @include size (300px,1500px);
+        @include size (300px, 1500px);
     }
 
     .informacionTextoSeleccion {
@@ -91,7 +93,9 @@ animation-duration: 1s;
 
     .textoSeleccion {
         padding: 160px;
-        font-size: 15px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
     }
 
     .messiArgentinaseleccion {
@@ -100,26 +104,31 @@ animation-duration: 1s;
         filter: brightness(90%);
     }
 }
+
 // 
-@media screen and (max-width:1440px){
-    .messiArgentina{
+@media screen and (max-width:1440px) {
+    .messiArgentina {
         height: 800px;
+
         .textoSeleccion {
             padding: 5px;
             width: 100%;
             height: 800px;
-         }
-         .messiArgentinaseleccion{
+        }
+
+        .messiArgentinaseleccion {
             height: 800px;
-         }
-         .textoSeleccion {
+        }
+
+        .textoSeleccion {
             padding: 160px;
             font-size: 15px;
         }
     }
 }
+
 // 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1024px) {
     .messiArgentina {
         height: 700px;
         display: flex;
@@ -157,15 +166,6 @@ animation-duration: 1s;
                 padding-left: 10px;
                 width: 850px;
             }
-            .fotosMessiGeneral{
-                display: flex;
-                .imagenInfoGeneral {
-                    height: 120px;
-                    width: 70%;
-                    flex-direction: column;
-                    padding: 5px;
-                }
-            }
         }
     }
 
@@ -177,8 +177,9 @@ animation-duration: 1s;
         padding-left: 30px;
 
         .informacionTextoSeleccionAmerica p {
-          padding: 40px;
-         }
+            padding: 40px;
+        }
+
         .videoCopaAmerica {
             height: 300px;
             width: 400px;
@@ -194,19 +195,21 @@ animation-duration: 1s;
     }
 
     .carouselSeleccion {
-        
+
         width: 100%;
         margin: auto;
         height: 800px;
         align-items: center;
+
         .carouselFotoSeleccion {
             height: 800px;
             width: 100%;
         }
     }
-    .mundial{
-        .container{
-            .row{
+
+    .mundial {
+        .container {
+            .row {
                 flex-direction: column;
             }
         }
@@ -214,9 +217,7 @@ animation-duration: 1s;
 
 }
 
-// 
-// 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
     .messiArgentina {
         display: flex;
         height: 650px;
@@ -255,8 +256,10 @@ animation-duration: 1s;
                 padding-left: 10px;
                 width: 600px;
             }
-            .fotosMessiGeneral{
+
+            .fotosMessiGeneral {
                 display: flex;
+
                 .imagenInfoGeneral {
                     height: 120px;
                     width: 70%;
@@ -268,15 +271,16 @@ animation-duration: 1s;
     }
 
     .copaAmerica {
-        height: 600px;
+        height: 400px;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-left: 30px;
 
         .informacionTextoSeleccionAmerica p {
-          padding: 40px;
-         }
+            padding: 40px;
+        }
+
         .videoCopaAmerica {
             height: 300px;
             width: 400px;
@@ -292,43 +296,40 @@ animation-duration: 1s;
     }
 
     .carouselSeleccion {
-        
+
         width: 100%;
         margin: auto;
         height: 800px;
         align-items: center;
+
         .carouselFotoSeleccion {
             height: 800px;
             width: 100%;
         }
     }
-    .mundial{
-        .container{
-            .row{
+
+    .mundial {
+        .container {
+            .row {
                 flex-direction: column;
             }
         }
     }
 
 }
- 
 
-
-// 
-// 
-// 
-// 
 @media screen and (max-width:425px) {
+
+    .textoSeleccion {
+        padding: 0;
+        font-size: 13px !important;
+    }
+
     .messiArgentina {
         flex-direction: flex;
-        
-        .subtituloArgentina {
-          display: none;
-        }
 
-        .textoSeleccion {
-            padding: 30px;
-            font-size: 13px;
+        .subtituloArgentina {
+            display: none;
         }
 
         .messiArgentinaseleccion {
@@ -351,15 +352,17 @@ animation-duration: 1s;
                 padding-left: 10px;
                 width: 400px;
             }
-            .fotosMessiGeneral{
+
+            .fotosMessiGeneral {
                 display: flex;
-                flex-direction: column; 
+                flex-direction: column;
                 align-items: center;
+
                 .imagenInfoGeneral {
-                        height: 100px;
-                        width: 70%;   
-                        padding: 5px;
-                    }
+                    height: auto;
+                    width: 320px;
+                    padding: 0;
+                }
             }
         }
     }
@@ -374,15 +377,17 @@ animation-duration: 1s;
             width: 100%;
         }
     }
-    .mundial{
-        .container{
-            .row{
+
+    .mundial {
+        .container {
+            .row {
                 flex-direction: column;
             }
         }
     }
 
 }
+
 // 
 // 
 
@@ -398,8 +403,8 @@ animation-duration: 1s;
         }
 
         .textoSeleccion {
-            padding: 30px;
-            font-size: 12px;
+            padding: 50px;
+            font-size: 12px !important;
         }
 
         .messiArgentinaseleccion {
@@ -456,19 +461,20 @@ animation-duration: 1s;
     }
 
     .carouselSeleccion {
-        width: 100%;
+        width: 100% !important;
         margin: auto;
-        height: 400px;
+        height: 400px !important;
 
         .carouselFotoSeleccion {
-            height: 400px;
-            width: 100%;
-            
+            height: 400px !important;
+            width: 100% !important;
+
         }
     }
-    .mundial{
-        .container{
-            .row{
+
+    .mundial {
+        .container {
+            .row {
                 flex-direction: column;
             }
         }
@@ -476,9 +482,6 @@ animation-duration: 1s;
 
 }
 
-
-
-// 
 @media screen and (max-width: 320px) {
     .messiArgentina {
         flex-direction: column;
@@ -492,7 +495,7 @@ animation-duration: 1s;
 
         .textoSeleccion {
             padding: 30px;
-            font-size: 10px;
+            font-size: 11px !important;
         }
 
         .messiArgentinaseleccion {
@@ -549,18 +552,20 @@ animation-duration: 1s;
     }
 
     .carouselSeleccion {
-        width: 100%;
+        width: 100% !important;
         margin: auto;
-        height: 400px;
+        height: 400px !important; 
+
         .carouselFotoSeleccion {
-            
-            height: 400px;
-            width: 100%;
+
+            height: 400px !important;
+            width: 100% !important;
         }
     }
-    .mundial{
-        .container{
-            .row{
+
+    .mundial {
+        .container {
+            .row {
                 flex-direction: column;
             }
         }
