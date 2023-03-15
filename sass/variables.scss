@@ -1,0 +1,13 @@
+$primarycolor: whitesmoke;
+
+$font-size: (
+    grande: 40px,
+    mediano: 30px,
+    chico: 20px,
+);
+
+@each $font, $size in $font-size {
+    .font-size-#{$font} {
+        font-size: $size;
+    }
+}

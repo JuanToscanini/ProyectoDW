@@ -1,0 +1,36 @@
+.contactotitulo {
+    text-align: center;
+}
+
+.contactoDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .formContacto {
+        display: flex;
+        flex-direction: column;
+
+        .contactoTitles {
+            font-weight: bolder;
+        }
+
+        .inputsForm {
+            border-radius: 10px;
+        }
+
+        .buttonForm {
+            transition-duration: 0.4s;
+            border-radius: 10px;
+            border: solid black 1px;
+            padding: 5px;
+            margin: 3px;
+        }
+
+        .buttonForm:hover {
+            background-color: #4a7cdf;
+            color: white;
+        }
+        
+    }
+}

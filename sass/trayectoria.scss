@@ -1,0 +1,28 @@
+.tituloClubes {
+    font-size: 20px;
+}
+
+.tituloSeleccion {
+    font-size: 20px;
+}
+
+.tituloPersonales {
+    font-size: 20px;
+}
+
+.carousel {
+    background-image: linear-gradient(135deg, #465EFB 0%, #3B2667 100%);
+    display: flex;
+    justify-content: center;
+    .carouselFoto {
+        object-fit: cover;
+        height: auto;
+        width: 100%;
+    }
+}
+.titulostotales{
+    font-size: 1fr;
+}
+.container{
+    padding: 38px;
+}   

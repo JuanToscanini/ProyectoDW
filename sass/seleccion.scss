@@ -1,0 +1,569 @@
+@mixin size ($alto, $ancho,) {
+    height: $alto;
+    width: $ancho;
+}
+.cuerpo{
+animation-name: fade-in;
+animation-duration: 1s;
+}
+.info {
+    padding: 50px;
+
+    .infogeneral {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 50px;
+
+        .tituloArgentina {
+            font-size: 25px;
+            padding-bottom: 20px;
+        }
+
+        .informacionTextoSeleccion {
+            font-size: 15px;
+            padding-right: 90px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .imagenInfoGeneral {
+        padding-top: 50px;
+        height: 300px;
+    }
+}
+
+.tituloCopaAmerica {
+    display: flex;
+    justify-content: center;
+}
+
+.copaAmerica {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30px;
+
+    .videoCopaAmerica {
+        padding: 30px;
+        @include size (300px,1500px);
+    }
+
+    .informacionTextoSeleccion {
+        font-size: 15px;
+        padding-right: 90px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.carousel {
+    background-image: linear-gradient(135deg, #465EFB 0%, #3B2667 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.fotocol {
+    display: flex;
+    justify-content: center;
+
+    .copaDelMundo {
+        height: 400px;
+    }
+}
+
+
+.messiArgentina {
+    background-image: linear-gradient(135deg, #465EFB 0%, #3B2667 100%);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .letraBlanca {
+        color: beige;
+    }
+
+    .subtituloArgentina {
+        padding: 50px;
+    }
+
+    .textoSeleccion {
+        padding: 160px;
+        font-size: 15px;
+    }
+
+    .messiArgentinaseleccion {
+        height: 900px;
+        width: 400px;
+        filter: brightness(90%);
+    }
+}
+// 
+@media screen and (max-width:1440px){
+    .messiArgentina{
+        height: 800px;
+        .textoSeleccion {
+            padding: 5px;
+            width: 100%;
+            height: 800px;
+         }
+         .messiArgentinaseleccion{
+            height: 800px;
+         }
+         .textoSeleccion {
+            padding: 160px;
+            font-size: 15px;
+        }
+    }
+}
+// 
+@media screen and (max-width:1024px){
+    .messiArgentina {
+        height: 700px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+
+        .subtituloArgentina {
+            font-size: 17px;
+            margin: auto;
+        }
+
+        .textoSeleccion {
+            padding: 30px;
+            font-size: 15px;
+        }
+
+        .messiArgentinaseleccion {
+            height: 100%;
+        }
+    }
+
+    .info {
+        padding-bottom: 10px;
+
+        .infogeneral {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+
+            .informacionTextoSeleccion {
+                padding-right: 0;
+                padding-left: 10px;
+                width: 850px;
+            }
+            .fotosMessiGeneral{
+                display: flex;
+                .imagenInfoGeneral {
+                    height: 120px;
+                    width: 70%;
+                    flex-direction: column;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .copaAmerica {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 30px;
+
+        .informacionTextoSeleccionAmerica p {
+          padding: 40px;
+         }
+        .videoCopaAmerica {
+            height: 300px;
+            width: 400px;
+            padding: 30px;
+        }
+
+        .informacionTextoSeleccion {
+            font-size: 15px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .carouselSeleccion {
+        
+        width: 100%;
+        margin: auto;
+        height: 800px;
+        align-items: center;
+        .carouselFotoSeleccion {
+            height: 800px;
+            width: 100%;
+        }
+    }
+    .mundial{
+        .container{
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+
+// 
+// 
+@media screen and (max-width:768px){
+    .messiArgentina {
+        display: flex;
+        height: 650px;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+
+        .subtituloArgentina {
+            padding: 0;
+            padding-top: 10px;
+            margin: auto;
+        }
+
+        .textoSeleccion {
+            padding: 30px;
+            font-size: 17px;
+        }
+
+        .messiArgentinaseleccion {
+            display: none;
+        }
+    }
+
+    .info {
+        padding-bottom: 10px;
+
+        .infogeneral {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+
+            .informacionTextoSeleccion {
+                padding-right: 0;
+                padding-left: 10px;
+                width: 600px;
+            }
+            .fotosMessiGeneral{
+                display: flex;
+                .imagenInfoGeneral {
+                    height: 120px;
+                    width: 70%;
+                    flex-direction: column;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+
+    .copaAmerica {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 30px;
+
+        .informacionTextoSeleccionAmerica p {
+          padding: 40px;
+         }
+        .videoCopaAmerica {
+            height: 300px;
+            width: 400px;
+            padding: 30px;
+        }
+
+        .informacionTextoSeleccion {
+            font-size: 15px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .carouselSeleccion {
+        
+        width: 100%;
+        margin: auto;
+        height: 800px;
+        align-items: center;
+        .carouselFotoSeleccion {
+            height: 800px;
+            width: 100%;
+        }
+    }
+    .mundial{
+        .container{
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+ 
+
+
+// 
+// 
+// 
+// 
+@media screen and (max-width:425px) {
+    .messiArgentina {
+        flex-direction: flex;
+        
+        .subtituloArgentina {
+          display: none;
+        }
+
+        .textoSeleccion {
+            padding: 30px;
+            font-size: 13px;
+        }
+
+        .messiArgentinaseleccion {
+            margin: auto;
+        }
+    }
+
+    .info {
+        padding-bottom: 10px;
+
+        .infogeneral {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+
+            .informacionTextoSeleccion {
+                padding-right: 0;
+                padding-left: 10px;
+                width: 400px;
+            }
+            .fotosMessiGeneral{
+                display: flex;
+                flex-direction: column; 
+                align-items: center;
+                .imagenInfoGeneral {
+                        height: 100px;
+                        width: 70%;   
+                        padding: 5px;
+                    }
+            }
+        }
+    }
+
+    .carouselSeleccion {
+        width: 100%;
+        margin: auto;
+        height: 500px;
+
+        .carouselFotoSeleccion {
+            height: 500px;
+            width: 100%;
+        }
+    }
+    .mundial{
+        .container{
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+// 
+// 
+
+@media screen and (max-width: 375px) {
+    .messiArgentina {
+        flex-direction: column;
+        width: 375px;
+
+        .subtituloArgentina {
+            padding: 0;
+            padding-top: 10px;
+            margin: auto;
+        }
+
+        .textoSeleccion {
+            padding: 30px;
+            font-size: 12px;
+        }
+
+        .messiArgentinaseleccion {
+            margin: auto;
+            width: 375px;
+        }
+    }
+
+    .info {
+        padding-bottom: 10px;
+
+        .infogeneral {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+
+            .informacionTextoSeleccion {
+                padding-right: 0;
+                padding-left: 10px;
+                width: 350px;
+            }
+
+            .imagenInfoGeneral {
+                width: 375px;
+            }
+        }
+
+        .informacionTextoSeleccionAmerica {
+            padding-right: 10px;
+        }
+    }
+
+    .copaAmerica {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 30px;
+        height: 700px;
+
+        .videoCopaAmerica {
+            height: 300px;
+            width: 300px;
+            padding: 30px;
+        }
+
+        .informacionTextoSeleccion {
+            font-size: 15px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .carouselSeleccion {
+        width: 100%;
+        margin: auto;
+        height: 400px;
+
+        .carouselFotoSeleccion {
+            height: 400px;
+            width: 100%;
+            
+        }
+    }
+    .mundial{
+        .container{
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+
+}
+
+
+
+// 
+@media screen and (max-width: 320px) {
+    .messiArgentina {
+        flex-direction: column;
+        width: 320px;
+
+        .subtituloArgentina {
+            padding: 0;
+            padding-top: 10px;
+            margin: auto;
+        }
+
+        .textoSeleccion {
+            padding: 30px;
+            font-size: 10px;
+        }
+
+        .messiArgentinaseleccion {
+            margin: auto;
+            width: 320px;
+        }
+    }
+
+    .info {
+        padding-bottom: 10px;
+
+        .infogeneral {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+            padding-bottom: 50px;
+
+            .informacionTextoSeleccion {
+                padding-right: 0;
+                padding-left: 10px;
+                width: 300px;
+            }
+
+            .imagenInfoGeneral {
+                width: 320px;
+            }
+        }
+
+        .informacionTextoSeleccionAmerica {
+            padding-right: 10px;
+        }
+    }
+
+    .copaAmerica {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 30px;
+        height: 800px;
+
+        .videoCopaAmerica {
+            height: 300px;
+            width: 300px;
+            padding: 30px;
+        }
+
+        .informacionTextoSeleccion {
+            font-size: 15px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .carouselSeleccion {
+        width: 100%;
+        margin: auto;
+        height: 400px;
+        .carouselFotoSeleccion {
+            
+            height: 400px;
+            width: 100%;
+        }
+    }
+    .mundial{
+        .container{
+            .row{
+                flex-direction: column;
+            }
+        }
+    }
+
+}

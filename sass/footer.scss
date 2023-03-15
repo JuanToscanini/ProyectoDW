@@ -1,0 +1,15 @@
+#footer {
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    border-top: solid whitesmoke;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.redSocial {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    height: 4vh;
+}

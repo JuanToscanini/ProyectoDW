@@ -5,12 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Messi | Clubes </title>
     <!-- BOOSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="../css/estilos.css">
+    <!--  -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,600&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <!--  -->
+    <meta name="Keywords" content="messi, Lionel, Messi Clubes, Clubes, Messi gol, Lionel Messi, Mundial Qatar, Copa America, Balon de oro">
+    <meta name="Description" content="Messi Equipos">
+    <!--  -->
+    <title> Messi | Clubes </title>
 </head>
 
 <body class="cuerpo d-flex flex-column min-vh-100">
@@ -43,7 +49,7 @@
                 </div>
             </div>
     </header>
-    <main>
+    <main class="equiposMain">
         <section class="grid_listaEquipos desaparecer">
             <div class="equipos1">
                 <h1 class="equiposClass">Equipos</h1>
@@ -52,33 +58,33 @@
                 <ul>
                     <li><a href="#newells">Newell´s Old Boys</a></li>
                     <li><a href="#barca">Barcelona</a></li>
-                    <li><a href="#paris">PSG</a></li>
+                    <li><a href="#paris">París Saint-Germain</a></li>
                 </ul>
             </div>
         </section>
         <!--  -->
-        <h2 class="clubesTituloInicio">Inicios:</h2>
+        
         <div class="container text-center gridClubesNewells">
             <div class="row newellsDiv">
-                <div class="col-6   ">
-                    <h3 id="newells" class="equipo newellsTitulo">Newell´s Old Boys</h3>
+                <div class="col-sm-12 col-lg-12  ">
+                    <h2 id="newells" class="equipo newellsTitulo">Newell´s Old Boys</h3>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-12 col-lg-12 ">
                     <img class="fotonewells1 desaparecer"
                         src="https://media.tycsports.com/files/2021/08/05/316513/newells_416x234.jpg"
                         alt="newellsmessi">
                 </div>
             </div>
             <div class="row infonewells">
-                <div class="col textoNewells">
+                <div class="col-sm-12 col-md-6 textoNewells">
                     <p>Leo comenzo jugando en un club de su barrio teniendo tan solo 5 años,
                         en donde luego de unos años comenzo a jugar en las divisiones inferiores de Newell´s
                         old Boys club en el cual jugaria desde el 1994 hasta el 1999, jugando un total de 176 partidos y
                         marcando una cantidad de 234 goles.
                     </p>
                 </div>
-                <div class="col textoNewells">
-                    <p>"Verlo jugar a Leo con tan corta edad realmente era impresionante.
+                <div class="col-sm-12 col-md-6 textoNewells">
+                    <p>"Verlo jugar a Leo con tan corta edad era impresionante.
                         Uno no podía creer (…) ver un chico con esa virtud, esa calidad, y tan menudito,
                         chiquitito, que haga tantas cosas con la pelota"
                         Desde muy pequeño se veia su gran nivel, lo que genero que
@@ -86,31 +92,26 @@
                         Barcelona.
                     </p>
                 </div>
-                <div class="col">
-                    <img class="messinewellscomienzo"
-                        src="https://i.pinimg.com/564x/da/71/b7/da71b7603351c5f5d2adceb467bbedb1.jpg"
-                        alt="comienzosmessi">
-                </div>
+            </div>
+            <div class="col-sm-12">
+                <img class="messinewellscomienzo"
+                    src="https://i.pinimg.com/564x/da/71/b7/da71b7603351c5f5d2adceb467bbedb1.jpg"
+                    alt="comienzosmessi">
             </div>
         </div>
         <!--  -->
         <section id="barca">
+            <h2 id="barca" class="equipo">Barcelona</h3>
+
             <div class="container">
-                <div class="row justify-content-start columnaTextoBarca">
-                    <div class="col-12 barcaTitulo">
-                        <h3 id="barca" class="equipo">Barcelona</h3>
-                    </div>
-                    <div class="col-4 desaparecer">
-                    </div>
-                </div>
-                <div class="row justify-content-center columnaTextoBarca textoBarcelona">
-                    <div class="col-4 textoBarcaparte1">
-                        <p>
+                <div class="row justify-content-around columnaTextoBarca">
+                    <div class="col-sm textoBarca">
+                        <p style="text-align: justify; ">
                             Comienza en el Barcelona, con 13 años de edad, paso rapidamente por las
                             diferentes categorías hasta el primer equipo, en el que debutó con apenas 16 años
                             en un partido amistoso ante el Oporto. En 2004, con 17 años,
                             jugó su primer encuentro oficial de la Liga española.</p>
-                        <p> El Barça resultó ganador de La Liga en esa temporada, y en la siguiente conquistó el doble
+                        <p style="text-align: justify;"> El Barça resultó ganador de La Liga en esa temporada, y en la siguiente conquistó el doble
                             título de
                             campeón
                             de La Liga y de la Champions League de la UEFA.
@@ -120,98 +121,102 @@
                             español.
                             incluyendo la Copa del Rey, La Liga y la Champions. </p>
                     </div>
-                    <div class="col-4 textoBarcaparte2">
+                    <div class="col-sm messijovenDiv">
                         <img class="messijoven desaparecer" src="../img/messibarca2.jpg" alt="messi Joven">
                     </div>
                 </div>
-                <div class="row justify-content-end columnaTextoBarca">
-                    <div class="col-4 desaparecer">
-                    </div>
-                    <div class="col-4 desaparecer">
-                    </div>
-                </div>
+            </div>
+
+            <div class="container">
                 <div class="row justify-content-around columnaTextoBarca">
-                    <div class="col-8 barcaTexto">
-                        <p>En los años siguientes, Lionel Messi siguió rompiendo récord tras récord a la vez que se iba
+                    <div class="col-sm textoBarca">
+                        <p>En los años siguientes, Lionel Messi siguió rompiendo récord tras récord a la vez que se
+                            iba
                             perfilando
                             como
                             el mejor jugador del Barcelona y del mundo en general.
-                            La mejor campaña individual de Messi a la fecha en términos estadísticos fue la temporada
+                            La mejor campaña individual de Messi a la fecha en términos estadísticos fue la
+                            temporada
                             2011-12,
                             en la que batió los récords españoles y europeos de más goles marcados en una única
                             temporada,
                             además de haberse convertido en el máximo goleador del Barça en competiciones oficiales
                         </p>
-                        <img class="messiClub3 desaparecer"
+                    </div>
+                    <div class="col-sm">
+                        <img class="desaparecer messiClub3"
                             src="https://i.pinimg.com/564x/98/a6/b8/98a6b847b3efe5a11c084670f5245302.jpg"
                             alt="messilaliga">
                     </div>
-                    <div class="col-0 desaparecer">
-                    </div>
                 </div>
+            </div>
+
+            <div class="container">
                 <div class="row justify-content-between columnaTextoBarca">
-                    <div class="col-0">
-                    </div>
-                    <div class="col-8 messiFotosClubesBarca">
+                    <div class="col-12 col-sm-12 messiFotosClubesBarca">
                         <img class="messiClub1"
                             src="https://i.pinimg.com/564x/f4/ac/72/f4ac725b88bf3479c42620303a00ccee.jpg"
                             alt="messibalonbarca">
-                        <img class="messiClub2"
+                            <img class="messiClub2"
                             src="https://i.pinimg.com/564x/99/5a/77/995a77489d79ecd006be8e81129403ba.jpg"
                             alt="messichampionsbarca">
+                    </div>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <div>
-                <h3 id="paris" class="equipo parisTitulo">PSG</h3>
+                <h2 id="paris" class="equipo parisTitulo">París Saint-Germain</h3>
             </div>
-                <div class="container">
-                    <div class="row containerparis">
-                        <div class="col align-self-start">
-                            <p class="texotParis">El 10 de agosto, Después de 20 años en el Barcelona, Leo inicio un nuevo capítulo en el
-                                club
-                                francés con el que firma un vínculo por dos temporadas, más una opcional. y se le dio el
-                                dorsal
-                                30, el
-                                mismo con el
-                                que debutó en el Barcelona.
-                            </p>
-                            <p class="texotParis">El 29, Messi jugó su primer partido ante el Stade de Reims, por la cuarta fecha de la
-                                Ligue
-                                1. El
-                                20 de
-                                noviembre, por la decimocuarta fecha, anotó su primer gol en la Ligue 1 en el 3-1 ante
-                                el
-                                Nantes. El 28,
-                                marcó un hat-trick de asistencias ante el Saint-Étienne, Al día siguiente, ganó su
-                                octavo
-                                Pichichi y su séptimo Balón de Oro
-                            </p>
-                            <p>El 7 de diciembre, en la última jornada de clasificación para octavos de final de la Liga
-                                de
-                                Campeones, anotó otro doblete en el 4-1 ante el Brujas. En ese partido, igualó a
-                                Cristiano
-                                Ronaldo como jugador que a más equipos (38) les ha convertido goles en la competición
-                                europea y,
-                                con 758 goles como profesional, superó a Pelé (757).
-                            </p>
-                        </div>
-                        <div class="fotosparis">
-                        <div class="col align-self-center">
+            <div class="container">
+                <div class="row containerparis">
+                    <div class="col align-self-start">
+                        <p class="texotParis">El 10 de agosto, Después de 20 años en el Barcelona, Leo inicio un nuevo
+                            capítulo en el
+                            club
+                            francés con el que firma un vínculo por dos temporadas, más una opcional. y se le dio el
+                            dorsal
+                            30, el
+                            mismo con el
+                            que debutó en el Barcelona.
+                        </p>
+                        <p class="texotParis">El 29, Messi jugó su primer partido ante el Stade de Reims, por la cuarta
+                            fecha de la
+                            Ligue
+                            1. El
+                            20 de
+                            noviembre, por la decimocuarta fecha, anotó su primer gol en la Ligue 1 en el 3-1 ante
+                            el
+                            Nantes. El 28,
+                            marcó un hat-trick de asistencias ante el Saint-Étienne, Al día siguiente, ganó su
+                            octavo
+                            Pichichi y su séptimo Balón de Oro
+                        </p>
+                        <p class="texotParis">El 7 de diciembre, en la última jornada de clasificación para octavos de final de la Liga
+                            de
+                            Campeones, anotó otro doblete en el 4-1 ante el Brujas. En ese partido, igualó a
+                            Cristiano
+                            Ronaldo como jugador que a más equipos (38) les ha convertido goles en la competición
+                            europea y,
+                            con 758 goles como profesional, superó a Pelé (757).
+                        </p>
+                    </div>
+                    <div class="row fotosParisDiv">
+                        <div class="col align-self-center fotosparis">
                             <img class="messijugandopsg"
                                 src="https://media.gq.com.mx/photos/6349931c5171b4baec7ce8b9/3:4/w_2250,h_3000,c_limit/Lionel_Messi_1243755223.jpg"
                                 alt="psgjugando">
                         </div>
-                        <div class="col align-self-end">
+                        <div class="col align-self-end fotosparis messiParisfirmandoD">
                             <img class="messiParisFirma"
                                 src="https://i.pinimg.com/564x/d0/a4/2d/d0a42d1fd088b250f5e150145b919e5a.jpg"
                                 alt="parismessi">
                         </div>
                     </div>
-                    </div>
+
                 </div>
+            </div>
         </section>
     </main>
     <footer id="footer" class="mt-auto">
