@@ -6,21 +6,30 @@ a {
     height: 100px;
 }
 
-li:hover {
-    transform: scale(1.2);
+@media screen and (min-width:1024px) {
+    li:hover {
+        transform: scale(1.2);
+    }
+    
+    li a:after {
+        content: '';
+        position: relative;
+        background-color: rgb(9, 153, 215);
+        height: 3px;
+        width: 0;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    a:hover:after {
+        color: rgb(9, 153, 215);
+        width: 100%;
+    }
 }
 
-li a:after {
-    content: '';
-    position: relative;
-    background-color: rgb(9, 153, 215);
-    height: 3px;
-    width: 0;
-    display: block;
-    transition: 0.3s;
-}
 
-a:hover:after {
-    color: rgb(9, 153, 215);
-    width: 100%;
+@media screen and (max-width:768px) {
+    li {
+        text-align: center;
+    }
 }

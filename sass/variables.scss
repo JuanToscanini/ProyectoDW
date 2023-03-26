@@ -1,5 +1,5 @@
 $primarycolor: whitesmoke;
-
+$colorResaltado:blue;
 $font-size: (
     grande: 40px,
     mediano: 30px,
@@ -11,3 +11,13 @@ $font-size: (
         font-size: $size;
     }
 }
+
+
+// 
+// 
+.palabrasClaves{
+    color: $colorResaltado;
+    font-weight: bold;
+}
+// 
+// 

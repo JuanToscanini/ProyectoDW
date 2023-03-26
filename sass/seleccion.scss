@@ -34,6 +34,7 @@
     .imagenInfoGeneral {
         padding-top: 50px;
         height: 300px;
+        width: 300px;
     }
 }
 
@@ -76,6 +77,9 @@
     }
 }
 
+.subtituloArgentina {
+    padding: 10px;
+}
 
 .messiArgentina {
     background-image: linear-gradient(135deg, #465EFB 0%, #3B2667 100%);
@@ -85,9 +89,6 @@
 
     .letraBlanca {
         color: beige;
-    }
-
-    .subtituloArgentina {
         padding: 50px;
     }
 
@@ -367,6 +368,14 @@
         }
     }
 
+    .copaAmerica {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 30px;
+    }
+
     .carouselSeleccion {
         width: 100%;
         margin: auto;
@@ -443,8 +452,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding-left: 30px;
-        height: 700px;
+        padding-left: 10px;
+        height: auto;
 
         .videoCopaAmerica {
             height: 300px;
@@ -457,6 +466,10 @@
             padding-right: 10px;
             display: flex;
             flex-direction: column;
+
+            p{
+                padding: 10px;
+            }
         }
     }
 
@@ -554,7 +567,7 @@
     .carouselSeleccion {
         width: 100% !important;
         margin: auto;
-        height: 400px !important; 
+        height: 400px !important;
 
         .carouselFotoSeleccion {
 

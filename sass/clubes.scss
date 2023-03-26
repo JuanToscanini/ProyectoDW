@@ -49,17 +49,19 @@
         }
     }
 
+    .equipo {
+        font-size: 30px;
+        width: auto;
+        font-style: italic;
+        text-align: center;
+    }
+
     .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        .equipo {
-            font-size: 50px;
-            width: auto;
-            font-style: italic;
-            text-align: center;
-        }
     }
+
     .messijoven {
         height: 400px;
         margin: auto;
@@ -69,13 +71,8 @@
     .columnaTextoBarca {
         font-size: 20px;
 
-        .barcaTexto {
-            display: flex;
-            flex-direction: row;
-
-            p {
-                padding: 5%;
-            }
+        .texto_leo {
+            padding: 10px;
         }
 
         .messiClub1 {
@@ -94,6 +91,10 @@
 
         .messiFotosClubesBarca {
             text-align: center;
+        }
+        .messijovenDiv{
+            display: flex;
+            justify-content: space-around;
         }
     }
 
@@ -120,12 +121,153 @@
     }
 }
 
+@media screen and (max-width:1440px) {
+    .equiposMain {
+        animation-name: fade-in;
+        animation-duration: 1s;
+
+        .grid_listaEquipos {
+            width: 100%;
+        }
+
+        .clubesTituloInicio {
+            width: 100%;
+        }
+
+        .gridClubesNewells {
+            width: 1400px;
+
+            .newellsDiv {
+                flex-direction: column;
+            }
+
+            .equipo {
+                font-size: 20px;
+                width: 100px;
+                margin: 0px;
+            }
+
+            .fotonewells1 {
+                display: none;
+            }
+
+            .messinewellscomienzo {
+                height: auto;
+            }
+
+            .infonewells {
+                padding-top: 10px;
+
+                .texto_leo {
+                    font-size: 20px;
+                    text-align: justify;
+
+                }
+            }
+        }
+
+        .columnaTextoBarca {
+            font-size: 15px;
+
+            .texto_leo {
+                font-size: 20px;
+            }
+
+            .messijoven {
+                display: inline;
+                margin: 25px;
+            }
+
+            .textoBarca {
+                font-size: 15px;
+                padding: 5px;
+                padding-bottom: 10px;
+            }
+
+            .messijovenDiv {
+                width: auto;
+            }
+
+            .messiClub2 {
+                height: 100px;
+            }
+
+            .messiClub1 {
+                height: 200px;
+            }
+
+            .messiFotosClubesBarca {
+                display: none;
+            }
+        }
+
+        .containerparis {
+            flex-direction: column;
+            .texto_leo{
+                font-size: 20px;
+            }
+            .containerparis1 {
+                .containerparis {
+
+                    .leo_texto {
+                        font-size: 20px;
+                        padding: 5px;
+                    }
+                }
+            }
+
+            .fotosparis {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .messijugandopsg {
+                height: 450px;
+                width: 360px;
+                margin: 10px;
+            }
+
+            .messiParisfirmando {
+                display: none;
+            }
+        }
+
+        .parisTitulo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .desaparecer {
+            display: none;
+        }
+    }
+}
+
+
+
 // 
 // 
+@media screen and (max-width:1024px) {
+    .columnaparis {
+        .texto_leo {
+            font-size: 22px;
+            padding: 5px;
+        }
+    }
+
+    .textoBarca {
+        .texto_leo {
+            font-size: 20px;
+            padding: 5px;
+        }
+    }
+
+}
 
 
 @media screen and (max-width:768px) {
-    .desaparecer768{
+    .desaparecer768 {
         display: none !important;
     }
 
@@ -139,17 +281,21 @@
 
     .gridClubesNewells {
         width: 700px;
+
         .newellsDiv {
             flex-direction: column;
         }
+
         .equipo {
             font-size: 20px;
             width: 100px;
             margin: 0px;
         }
+
         .fotonewells1 {
             display: none;
         }
+
         .messinewellscomienzo {
             height: auto;
         }
@@ -164,6 +310,7 @@
             }
         }
     }
+
     .columnaTextoBarca {
         font-size: 15px;
 
@@ -198,8 +345,8 @@
     .containerparis {
         flex-direction: column;
 
-        .texotParis {
-            font-size: 15px;
+        .texto_leo {
+            font-size: 20px;
             padding: 5px;
         }
 
@@ -233,40 +380,46 @@
 // 
 // 
 @media screen and (max-width:425px) {
-    .grid_listaEquipos {
-        width: 426px;
-    }
-
-    .clubesTituloInicio {
-        width: 300px;
-    }
-
-    .gridClubesNewells {
-        width: 400px;
-
-        .equipo {
-            font-size: 20px;
-            width: 100px;
-            margin: 0px;
+    .equiposMain {
+        .grid_listaEquipos {
+            width: 426px;
         }
 
-        .messinewellscomienzo {
-            height: 300px;
+        .clubesTituloInicio {
+            width: 300px;
         }
 
-        .infonewells {
-            padding-top: 10px;
+        .gridClubesNewells {
+            width: 400px;
 
-            .textoNewells {
-                font-size: 15px;
-                text-align: justify;
+            .messinewellscomienzo {
+                height: 350px;
+            }
 
+            .equipo {
+                font-size: 20px;
+                width: 100px;
+                margin: 0px;
+            }
+
+            .messinewellscomienzo {
+                height: 300px;
+            }
+
+            .infonewells {
+                padding-top: 10px;
+
+                .textoNewells {
+                    font-size: 15px;
+                    text-align: justify;
+
+                }
+            }
+
+            .newellsDiv {
+                flex-direction: column;
             }
         }
-    }
-
-    .newellsDiv {
-        flex-direction: column;
     }
 
     .columnaTextoBarca {
@@ -330,192 +483,209 @@
 // 
 // 
 @media screen and (max-width:375px) {
-    .grid_listaEquipos {
-        width: 100%;
-    }
-
-    .clubesTituloInicio {
-        width: 300px;
-    }
-
-    .gridClubesNewells {
-        width: 100%;
-
-        .equipo {
-            font-size: 20px;
-            width: 100px;
-            margin: 0px;
+    .equiposMain {
+        .grid_listaEquipos {
+            width: 100%;
         }
 
-        .infonewells {
-            padding-top: 10px;
+        .clubesTituloInicio {
+            width: 300px;
+        }
 
-            .textoNewells {
+        .gridClubesNewells {
+            width: 320px;
+
+            .messinewellscomienzo {
+                height: 320px;
+            }
+
+            .equipo {
+                font-size: 20px;
+                width: 100px;
+                margin: 0px;
+            }
+
+            .infonewells {
+                padding-top: 10px;
+
+                .textoNewells {
+                    font-size: 15px;
+                    text-align: justify;
+
+                }
+
+            }
+
+            .newellsDiv {
+                flex-direction: column;
+            }
+        }
+
+
+        .columnaTextoBarca {
+            font-size: 15px;
+
+            .messiClub2 {
+                height: 200px;
+            }
+
+            .messiClub1 {
+                height: 200px;
+            }
+
+            .textoBarca {
                 font-size: 15px;
-                text-align: justify;
-
+                padding: 5px;
+                padding-bottom: 10px;
             }
         }
-    }
 
-    .newellsDiv {
-        flex-direction: column;
-    }
-
-    .columnaTextoBarca {
-        font-size: 15px;
-
-        .messiClub2 {
-            height: 200px;
+        .messiFotosClubesBarca {
+            display: none;
         }
 
-        .messiClub1 {
-            height: 200px;
+        // 
+        .parisTitulo {
+            display: flex;
+            justify-content: center;
         }
 
-        .textoBarca {
-            font-size: 15px;
-            padding: 5px;
-            padding-bottom: 10px;
-        }
-    }
+        .containerparis {
+            width: 320px;
 
-    .messiFotosClubesBarca {
-        display: none;
-    }
-
-    // 
-    .parisTitulo {
-        display: flex;
-        justify-content: center;
-    }
-
-    .containerparis {
-        width: 320px;
-
-        .texotParis {
-            width: 310px;
-            font-size: 15px;
-            padding: 5px;
-        }
-
-        .fotosParisDiv {
-            margin: auto;
-            padding: auto;
-
-            .fotosparis {
-                flex-direction: row;
-                flex-wrap: nowrap;
+            .texotParis {
+                width: 320px;
+                font-size: 15px;
+                padding: 5px;
             }
 
-            .messiParisFirma {
-                display: none;
+            .fotosParisDiv {
+                margin: auto;
+                padding: auto;
+
+                .fotosparis {
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                }
+
+                .messiParisFirma {
+                    display: none;
+                }
             }
         }
-    }
 
-    .desaparecer {
-        display: none;
+        .desaparecer {
+            display: none;
+        }
     }
 }
 
 // 
 // 
 @media screen and (max-width:320px) {
-
-    .columnaparis{
-        padding: 0;
-    }
-
-    .containerparis1{
-        padding: 0 !important;
-    }
-
-    .desaparecer{
-        display: none !important;
-    }
-
-    .grid_listaEquipos {
-        width: 100%;
-    }
-
-    .clubesTituloInicio {
-        width: 300px;
-    }
-
-    .gridClubesNewells {
-        width: 100%;
-
-        .equipo {
-            font-size: 30px !important;
-            width: 100px;
-            margin: 0px;
+    .equiposMain {
+        .columnaparis {
+            padding: 0;
         }
 
-        .infonewells {
-            padding-top: 10px;
+        .containerparis1 {
+            padding: 0 !important;
+        }
 
-            .textoNewells {
-                font-size: 15px;
-                text-align: justify;
+        .desaparecer {
+            display: none !important;
+        }
 
+        .grid_listaEquipos {
+            width: 100%;
+        }
+
+        .clubesTituloInicio {
+            width: 300px;
+        }
+
+        .gridClubesNewells {
+            width: 320px;
+
+            .messinewellscomienzo {
+                height: 320px;
+            }
+
+            .equipo {
+                font-size: 30px !important;
+                width: 100px;
+                margin: 0px;
+            }
+
+            .infonewells {
+                padding-top: 10px;
+
+                .textoNewells {
+                    font-size: 15px;
+                    text-align: justify;
+
+                }
             }
         }
-    }
 
-    .newellsDiv {
-        flex-direction: column;
-    }
-
-    .columnaTextoBarca {
-        font-size: 15px;
-
-        .messiClub2 {
-            height: 200px;
+        .newellsDiv {
+            flex-direction: column;
         }
 
-        .messiClub1 {
-            height: 200px;
-        }
-    }
-
-    .textoBarca {
-        font-size: 16px;
-        font-style: normal;
-    }
-
-    .messiFotosClubesBarca {
-        display: none;
-    }
-
-    // 
-    .parisTitulo {
-        display: flex;
-        justify-content: center;
-    }
-
-    .containerparis {
-        flex-direction: column;
-
-        .texotParis {
+        .columnaTextoBarca {
             font-size: 15px;
-            padding: 5px;
-        }
 
-        .fotosparis {
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            width: 280px;
+            .texto_leo {
+                padding: 10px;
+            }
 
-            .messijugandopsg {
-                height: 360px;
+            .messiClub2 {
+                height: 200px;
+            }
+
+            .messiClub1 {
+                height: 200px;
             }
         }
-    }
 
-    .desaparecer {
-        display: none;
+        .textoBarca {
+            font-size: 16px;
+            font-style: normal;
+        }
+
+        .messiFotosClubesBarca {
+            display: none;
+        }
+
+        // 
+        .parisTitulo {
+            display: flex;
+            justify-content: center;
+        }
+
+        .containerparis {
+            flex-direction: column;
+
+            .texto_leo {
+                font-size: 20px;
+                padding: 20px;
+            }
+
+            .fotosparis {
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width: 280px;
+
+                .messijugandopsg {
+                    height: 360px;
+                }
+            }
+        }
+
+        .desaparecer {
+            display: none;
+        }
     }
 }

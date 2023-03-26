@@ -10,6 +10,11 @@
   font-size: 20px;
 }
 
+.palabrasClaves {
+  color: blue;
+  font-weight: bold;
+}
+
 @keyframes fade-in {
   0% {
     transform: translateX(-200px);
@@ -52,25 +57,29 @@ a {
   height: 100px;
 }
 
-li:hover {
-  transform: scale(1.2);
+@media screen and (min-width: 1024px) {
+  li:hover {
+    transform: scale(1.2);
+  }
+  li a:after {
+    content: "";
+    position: relative;
+    background-color: rgb(9, 153, 215);
+    height: 3px;
+    width: 0;
+    display: block;
+    transition: 0.3s;
+  }
+  a:hover:after {
+    color: rgb(9, 153, 215);
+    width: 100%;
+  }
 }
-
-li a:after {
-  content: "";
-  position: relative;
-  background-color: rgb(9, 153, 215);
-  height: 3px;
-  width: 0;
-  display: block;
-  transition: 0.3s;
+@media screen and (max-width: 768px) {
+  li {
+    text-align: center;
+  }
 }
-
-a:hover:after {
-  color: rgb(9, 153, 215);
-  width: 100%;
-}
-
 #footer {
   background-image: url(../img/fondo.jpg);
   background-size: cover;
@@ -80,13 +89,46 @@ a:hover:after {
   flex-direction: row;
 }
 
-.redSocial {
+.redSocialfooter {
+  display: flex;
+  width: 1000px;
+  justify-content: space-around;
+}
+.redSocialfooter .redSocial {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 10px;
   height: 4vh;
 }
 
+@media screen and (max-width: 768px) {
+  .redSocialfooter {
+    display: flex;
+    width: 700px;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 425px) {
+  .redSocialfooter {
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 375px) {
+  .redSocialfooter {
+    display: flex;
+    width: 350px;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 320px) {
+  .redSocialfooter {
+    display: flex;
+    width: 320px;
+    justify-content: space-around;
+  }
+}
 #main_index {
   animation-name: fade-in;
   animation-duration: 1s;
@@ -122,16 +164,19 @@ a:hover:after {
   grid-template-areas: " textoMessiPersonal1 textoMessiPersonal1" "textoMessiPersonal2 fotoPersonal";
   row-gap: 1px;
   border-top: 4px solid whitesmoke;
+  height: 900px;
 }
 #main_index .textoSobreEl .infoPersona {
   grid-area: textoMessiPersonal1;
+  height: 300px;
 }
 #main_index .textoSobreEl .infoPersona .subtitulo {
+  padding-left: 20px;
   margin-bottom: 20px;
   color: black;
 }
 #main_index .textoSobreEl .infoPersona .infopersonal {
-  padding: 1%;
+  padding: 5%;
 }
 #main_index .textoSobreEl .infoPersona2 {
   grid-area: textoMessiPersonal2;
@@ -139,7 +184,7 @@ a:hover:after {
   justify-content: center;
 }
 #main_index .textoSobreEl .infoPersona2 .infopersonal {
-  padding: 1%;
+  padding: 5%;
 }
 #main_index .textoSobreEl .messiFamilia {
   grid-area: fotoPersonal;
@@ -160,6 +205,7 @@ a:hover:after {
 }
 .cuerpo .quienEs {
   grid-area: quien;
+  padding: 10px;
 }
 .cuerpo .quienEs .subtitulo {
   margin-bottom: 20px;
@@ -177,11 +223,14 @@ a:hover:after {
   grid-area: actualidad;
 }
 .cuerpo .actualidad .textoPrincipalIndex {
-  padding: 2%;
+  padding: 10px;
   font-style: normal;
 }
 .cuerpo .texto2jugador {
   grid-area: textojugadordos;
+}
+.cuerpo .texto2jugador .texto2Messi {
+  padding: 2%;
 }
 .cuerpo .texto2jugador .ajusteTextoIndex1 {
   padding: 0%;
@@ -200,28 +249,10 @@ a:hover:after {
 .cuerpo .indexfotosinfo .galeriaFotos {
   color: white;
 }
-.cuerpo .indexfotosinfo #grid_container_fotos_index {
-  display: grid;
-  row-gap: 5px;
-  grid-template-rows: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  grid-template-areas: "div1" "div2   ";
-}
-.cuerpo .indexfotosinfo #grid_container_fotos_index .fotos1 {
-  grid-area: div1;
-  display: flex;
-  columns: raw;
-  padding-left: 40px;
-}
-.cuerpo .indexfotosinfo #grid_container_fotos_index .fotos2 {
-  grid-area: div2;
-  display: flex;
-  columns: raw;
-  padding-left: 40px;
-}
-.cuerpo .fotos {
-  height: 40vh;
+.cuerpo .indexfotosinfo .fotos {
+  height: 400px;
+  width: 400px;
+  padding: 5px;
 }
 .cuerpo .videosGrid {
   display: grid;
@@ -249,104 +280,165 @@ a:hover:after {
   padding: 5px;
 }
 @media screen and (max-width: 1440px) {
-  .cuerpo .desaparecer1024 {
+  .cuerpo #main_index .textoJugador {
+    height: 550px;
+  }
+  .cuerpo #main_index .textoJugador .quienEs {
+    height: 70px;
+    padding-left: 30px;
+  }
+  .cuerpo #main_index .textoJugador .actualidad {
+    height: 70px;
+  }
+  .cuerpo #main_index .desaparecer1024 {
     display: none;
   }
-  .cuerpo .fotos {
-    width: 600px;
-    height: auto;
+  .cuerpo #main_index .fotos {
+    width: 400px;
+    height: 400px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .cuerpo .fotos {
-    width: 450px;
-    height: auto;
+  .cuerpo #main_index .desaparecer {
+    display: none;
   }
-  .cuerpo .desaparecer1024 {
+  .cuerpo #main_index .textoJugador {
+    height: 450px;
+  }
+  .cuerpo #main_index .textoJugador .quienEs {
+    height: 70px;
+  }
+  .cuerpo #main_index .textoJugador .actualidad {
+    height: 70px;
+  }
+  .cuerpo #main_index .fotos {
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+  }
+  .cuerpo #main_index .desaparecer1024 {
     display: none;
   }
 }
 @media screen and (max-width: 768px) {
-  .cuerpo .video3 {
+  .cuerpo #main_index .video3 {
     display: none;
   }
-  .cuerpo .video2 {
+  .cuerpo #main_index .fotos {
+    width: 300px;
+    height: 300px;
+  }
+  .cuerpo #main_index .video2 {
     display: none;
   }
-  .cuerpo .messiFamiliaImg {
+  .cuerpo #main_index .textoJugador {
+    height: 600px;
+  }
+  .cuerpo #main_index .textoJugador .quienEs {
+    height: 70px;
+    padding-left: 10px;
+  }
+  .cuerpo #main_index .textoJugador .actualidad {
+    height: 70px;
+  }
+  .cuerpo #main_index .indexfotosinfo {
+    height: auto;
+  }
+  .cuerpo #main_index .textoSobreEl {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: " textoMessiPersonal1" "textoMessiPersonal2 ";
+    height: 600px;
+    width: 100%;
+  }
+  .cuerpo #main_index .textoSobreEl .infoPersona {
+    height: 250px;
+  }
+  .cuerpo #main_index .textoSobreEl .infoPersona .subtitulo {
+    padding-left: 10px;
+  }
+  .cuerpo #main_index .textoSobreEl .messiFamiliaImg {
     width: 450px;
   }
-  .cuerpo .fotos {
+  .cuerpo #main_index .textoSobreEl .fotos {
     width: 350px;
   }
-  .cuerpo .desaparecer768 {
-    display: none;
+  .cuerpo #main_index .videosGrid .videostitulo .subtitulo {
+    padding-left: 10px;
   }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) and (max-width: 425px) {
   .cuerpo .desaparecer {
     display: none;
   }
-  .cuerpo .fotos {
-    height: 250px;
-    margin: 0%;
-    width: 250px;
-  }
-  .cuerpo #grid_container_index {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "headerindex" "mainindex" "footerindex";
-  }
-  .cuerpo #grid_container_index #headerindex {
+  .cuerpo #headerindex {
     grid-area: headerindex;
   }
-  .cuerpo #grid_container_index #main_index {
+  .cuerpo #main_index {
     grid-area: mainindex;
   }
-  .cuerpo #grid_container_index .textoJugador {
+  .cuerpo #main_index .textoJugador {
     justify-content: center;
     width: 100%;
-    height: 550px;
+    height: 650px;
   }
-  .cuerpo #grid_container_index .indexfotosinfo {
+  .cuerpo #main_index .textoJugador .quienEs {
+    height: 70px;
+  }
+  .cuerpo #main_index .textoJugador .actualidad {
+    height: 70px;
+    padding-left: 5px;
+  }
+  .cuerpo #main_index .indexfotosinfo {
     width: 100%;
-    height: 700px;
+    height: auto;
     margin: 0%;
   }
-  .cuerpo #grid_container_index .indexfotosinfo #grid_container_fotos_index {
-    margin: 0%;
-    justify-content: center;
-    padding: 10px;
-    height: 600px;
+  .cuerpo #main_index .indexfotosinfo .fotos {
+    padding: 5px;
+    height: 350px;
+    width: 350px;
   }
-  .cuerpo #grid_container_index .textoSobreEl {
+  .cuerpo #main_index .textoSobreEl {
     display: grid;
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas: " textoMessiPersonal1 textoMessiPersonal1" "textoMessiPersonal2 fotoPersonal";
-    row-gap: 1px;
-    border-top: 4px solid whitesmoke;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: " textoMessiPersonal1" "textoMessiPersonal2 ";
+    width: 100%;
+    height: auto;
   }
-  .cuerpo #grid_container_index .textoSobreEl .messiFamilia {
+  .cuerpo #main_index .textoSobreEl .infoPersona .subtitulo {
+    padding-left: 10px;
+  }
+  .cuerpo #main_index .textoSobreEl .infoPersona .infoPersona2 {
+    height: 500px;
+  }
+  .cuerpo #main_index .textoSobreEl .messiFamilia {
     grid-area: messifotofamilia;
   }
-  .cuerpo #grid_container_index .textoSobreEl .messiFamilia .messiFamiliaImg {
+  .cuerpo #main_index .textoSobreEl .messiFamilia .messiFamiliaImg {
     height: 300px;
     width: 300px;
   }
-  .cuerpo #grid_container_index .videosGrid {
+  .cuerpo #main_index .videosGrid {
     width: 100%;
   }
-  .cuerpo #grid_container_index .videosGrid .videosIndex {
+  .cuerpo #main_index .videosGrid .videosIndex {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 20px;
   }
-  .cuerpo #grid_container_index .videosGrid .videosIndex .video3 {
+  .cuerpo #main_index .videosGrid .videosIndex .video3 {
     display: none;
+  }
+  .cuerpo #grid_container_index {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "headerindex" "mainindex" "footerindex";
   }
   .cuerpo .messiArgentina {
     flex-direction: column;
@@ -382,81 +474,83 @@ a:hover:after {
     width: 400px;
   }
 }
-
+@media screen and (max-width: 375px) {
+  .cuerpo #main_index .indexfotosinfo .fotos {
+    height: 300px;
+    width: 300px;
+    padding: 5px;
+  }
+}
 @media screen and (max-width: 320px) {
-  #headerindex {
+  .cuerpo #headerindex {
     grid-area: headerindex;
   }
-  #main_index {
+  .cuerpo #main_index {
     grid-area: mainindex;
+    /*index 1 */
+    /* index 3 */
   }
-  #footer {
-    grid-area: footerindex;
-    padding-bottom: 2%;
-  }
-  #grid_container_index {
-    width: 100%;
-    display: block;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "headerindex headerindex headerindex" "mainindex mainindex mainindex" "footerindex footerindex footerindex";
-  }
-  /*index 1 */
-  .textoJugador {
+  .cuerpo #main_index .textoJugador {
     justify-content: center;
-    width: 100%;
-  }
-  .textoJugador .texto2jugador {
-    height: 350px;
-  }
-  .textoJugador .texto2jugador .aaa {
-    height: 300px;
-  }
-  .fotos {
-    height: 250px;
-    margin: 0%;
-    width: 250px;
-  }
-  .indexfotosinfo {
     width: 100%;
     height: 700px;
-    margin: 0%;
   }
-  #grid_container_fotos_index {
-    margin: 0%;
-    justify-content: center;
-    padding: 10px;
-    height: 600px;
+  .cuerpo #main_index .textoJugador .texto2jugador {
+    height: 350px;
   }
-  /* index 3 */
-  .messiFamilia {
+  .cuerpo #main_index .textoJugador .texto2jugador .texto2Messi {
+    height: 300px;
+    padding: 2%;
+  }
+  .cuerpo #main_index .indexfotosinfo .fotos {
+    height: 250px;
+    padding: 5px;
+    width: 250px;
+  }
+  .cuerpo #main_index .messiFamilia {
     grid-area: messifotofamilia;
   }
-  .messiFamiliaImg {
+  .cuerpo #main_index .messiFamiliaImg {
     height: 300px;
     width: 300px;
     display: none;
   }
-  .textoSobreEl {
+  .cuerpo #main_index .textoSobreEl {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: " textoMessiPersonal1" "textoMessiPersonal2" "messifotofamilia";
+    grid-template-areas: " textoMessiPersonal1" "textoMessiPersonal2 ";
+    width: 100%;
+    height: 900px;
+  }
+  .cuerpo #main_index .textoSobreEl .infoPersona .subtitulo {
+    padding-left: 10px;
+  }
+  .cuerpo #main_index .videosGrid {
     width: 100%;
   }
-  .videosGrid {
-    width: 100%;
-  }
-  .video3 {
+  .cuerpo #main_index .video3 {
     display: none;
   }
-  .videosIndex {
+  .cuerpo #main_index .videosIndex {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-bottom: 20px;
   }
+  .cuerpo #grid_container_index {
+    width: 100%;
+    display: block;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "headerindex headerindex headerindex" "mainindex mainindex mainindex" "footerindex footerindex footerindex";
+  }
+  .cuerpo #footer {
+    grid-area: footerindex;
+    padding-bottom: 2%;
+  }
 }
+
 .equiposMain {
   animation-name: fade-in;
   animation-duration: 1s;
@@ -498,16 +592,16 @@ a:hover:after {
 .equiposMain .grid_listaEquipos .equipos2 ul li a {
   color: whitesmoke;
 }
+.equiposMain .equipo {
+  font-size: 30px;
+  width: auto;
+  font-style: italic;
+  text-align: center;
+}
 .equiposMain .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.equiposMain .container .equipo {
-  font-size: 50px;
-  width: auto;
-  font-style: italic;
-  text-align: center;
 }
 .equiposMain .messijoven {
   height: 400px;
@@ -517,12 +611,8 @@ a:hover:after {
 .equiposMain .columnaTextoBarca {
   font-size: 20px;
 }
-.equiposMain .columnaTextoBarca .barcaTexto {
-  display: flex;
-  flex-direction: row;
-}
-.equiposMain .columnaTextoBarca .barcaTexto p {
-  padding: 5%;
+.equiposMain .columnaTextoBarca .texto_leo {
+  padding: 10px;
 }
 .equiposMain .columnaTextoBarca .messiClub1 {
   height: 300px;
@@ -537,6 +627,10 @@ a:hover:after {
 }
 .equiposMain .columnaTextoBarca .messiFotosClubesBarca {
   text-align: center;
+}
+.equiposMain .columnaTextoBarca .messijovenDiv {
+  display: flex;
+  justify-content: space-around;
 }
 .equiposMain .newellsTitulo {
   margin: auto;
@@ -556,6 +650,109 @@ a:hover:after {
   height: 300px;
 }
 
+@media screen and (max-width: 1440px) {
+  .equiposMain {
+    animation-name: fade-in;
+    animation-duration: 1s;
+  }
+  .equiposMain .grid_listaEquipos {
+    width: 100%;
+  }
+  .equiposMain .clubesTituloInicio {
+    width: 100%;
+  }
+  .equiposMain .gridClubesNewells {
+    width: 1400px;
+  }
+  .equiposMain .gridClubesNewells .newellsDiv {
+    flex-direction: column;
+  }
+  .equiposMain .gridClubesNewells .equipo {
+    font-size: 20px;
+    width: 100px;
+    margin: 0px;
+  }
+  .equiposMain .gridClubesNewells .fotonewells1 {
+    display: none;
+  }
+  .equiposMain .gridClubesNewells .messinewellscomienzo {
+    height: auto;
+  }
+  .equiposMain .gridClubesNewells .infonewells {
+    padding-top: 10px;
+  }
+  .equiposMain .gridClubesNewells .infonewells .texto_leo {
+    font-size: 20px;
+    text-align: justify;
+  }
+  .equiposMain .columnaTextoBarca {
+    font-size: 15px;
+  }
+  .equiposMain .columnaTextoBarca .texto_leo {
+    font-size: 20px;
+  }
+  .equiposMain .columnaTextoBarca .messijoven {
+    display: inline;
+    margin: 25px;
+  }
+  .equiposMain .columnaTextoBarca .textoBarca {
+    font-size: 15px;
+    padding: 5px;
+    padding-bottom: 10px;
+  }
+  .equiposMain .columnaTextoBarca .messijovenDiv {
+    width: auto;
+  }
+  .equiposMain .columnaTextoBarca .messiClub2 {
+    height: 100px;
+  }
+  .equiposMain .columnaTextoBarca .messiClub1 {
+    height: 200px;
+  }
+  .equiposMain .columnaTextoBarca .messiFotosClubesBarca {
+    display: none;
+  }
+  .equiposMain .containerparis {
+    flex-direction: column;
+  }
+  .equiposMain .containerparis .texto_leo {
+    font-size: 20px;
+  }
+  .equiposMain .containerparis .containerparis1 .containerparis .leo_texto {
+    font-size: 20px;
+    padding: 5px;
+  }
+  .equiposMain .containerparis .fotosparis {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .equiposMain .containerparis .messijugandopsg {
+    height: 450px;
+    width: 360px;
+    margin: 10px;
+  }
+  .equiposMain .containerparis .messiParisfirmando {
+    display: none;
+  }
+  .equiposMain .parisTitulo {
+    display: flex;
+    justify-content: center;
+  }
+  .equiposMain .desaparecer {
+    display: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .columnaparis .texto_leo {
+    font-size: 22px;
+    padding: 5px;
+  }
+  .textoBarca .texto_leo {
+    font-size: 20px;
+    padding: 5px;
+  }
+}
 @media screen and (max-width: 768px) {
   .desaparecer768 {
     display: none !important;
@@ -617,8 +814,8 @@ a:hover:after {
   .containerparis {
     flex-direction: column;
   }
-  .containerparis .texotParis {
-    font-size: 15px;
+  .containerparis .texto_leo {
+    font-size: 20px;
     padding: 5px;
   }
   .containerparis .fotosparis {
@@ -643,31 +840,34 @@ a:hover:after {
   }
 }
 @media screen and (max-width: 425px) {
-  .grid_listaEquipos {
+  .equiposMain .grid_listaEquipos {
     width: 426px;
   }
-  .clubesTituloInicio {
+  .equiposMain .clubesTituloInicio {
     width: 300px;
   }
-  .gridClubesNewells {
+  .equiposMain .gridClubesNewells {
     width: 400px;
   }
-  .gridClubesNewells .equipo {
+  .equiposMain .gridClubesNewells .messinewellscomienzo {
+    height: 350px;
+  }
+  .equiposMain .gridClubesNewells .equipo {
     font-size: 20px;
     width: 100px;
     margin: 0px;
   }
-  .gridClubesNewells .messinewellscomienzo {
+  .equiposMain .gridClubesNewells .messinewellscomienzo {
     height: 300px;
   }
-  .gridClubesNewells .infonewells {
+  .equiposMain .gridClubesNewells .infonewells {
     padding-top: 10px;
   }
-  .gridClubesNewells .infonewells .textoNewells {
+  .equiposMain .gridClubesNewells .infonewells .textoNewells {
     font-size: 15px;
     text-align: justify;
   }
-  .newellsDiv {
+  .equiposMain .gridClubesNewells .newellsDiv {
     flex-direction: column;
   }
   .columnaTextoBarca {
@@ -716,180 +916,253 @@ a:hover:after {
   }
 }
 @media screen and (max-width: 375px) {
-  .grid_listaEquipos {
+  .equiposMain .grid_listaEquipos {
     width: 100%;
   }
-  .clubesTituloInicio {
+  .equiposMain .clubesTituloInicio {
     width: 300px;
   }
-  .gridClubesNewells {
-    width: 100%;
+  .equiposMain .gridClubesNewells {
+    width: 320px;
   }
-  .gridClubesNewells .equipo {
+  .equiposMain .gridClubesNewells .messinewellscomienzo {
+    height: 320px;
+  }
+  .equiposMain .gridClubesNewells .equipo {
     font-size: 20px;
     width: 100px;
     margin: 0px;
   }
-  .gridClubesNewells .infonewells {
+  .equiposMain .gridClubesNewells .infonewells {
     padding-top: 10px;
   }
-  .gridClubesNewells .infonewells .textoNewells {
+  .equiposMain .gridClubesNewells .infonewells .textoNewells {
     font-size: 15px;
     text-align: justify;
   }
-  .newellsDiv {
+  .equiposMain .gridClubesNewells .newellsDiv {
     flex-direction: column;
   }
-  .columnaTextoBarca {
+  .equiposMain .columnaTextoBarca {
     font-size: 15px;
   }
-  .columnaTextoBarca .messiClub2 {
+  .equiposMain .columnaTextoBarca .messiClub2 {
     height: 200px;
   }
-  .columnaTextoBarca .messiClub1 {
+  .equiposMain .columnaTextoBarca .messiClub1 {
     height: 200px;
   }
-  .columnaTextoBarca .textoBarca {
+  .equiposMain .columnaTextoBarca .textoBarca {
     font-size: 15px;
     padding: 5px;
     padding-bottom: 10px;
   }
-  .messiFotosClubesBarca {
+  .equiposMain .messiFotosClubesBarca {
     display: none;
   }
-  .parisTitulo {
+  .equiposMain .parisTitulo {
     display: flex;
     justify-content: center;
   }
-  .containerparis {
+  .equiposMain .containerparis {
     width: 320px;
   }
-  .containerparis .texotParis {
-    width: 310px;
+  .equiposMain .containerparis .texotParis {
+    width: 320px;
     font-size: 15px;
     padding: 5px;
   }
-  .containerparis .fotosParisDiv {
+  .equiposMain .containerparis .fotosParisDiv {
     margin: auto;
     padding: auto;
   }
-  .containerparis .fotosParisDiv .fotosparis {
+  .equiposMain .containerparis .fotosParisDiv .fotosparis {
     flex-direction: row;
     flex-wrap: nowrap;
   }
-  .containerparis .fotosParisDiv .messiParisFirma {
+  .equiposMain .containerparis .fotosParisDiv .messiParisFirma {
     display: none;
   }
-  .desaparecer {
+  .equiposMain .desaparecer {
     display: none;
   }
 }
 @media screen and (max-width: 320px) {
-  .columnaparis {
+  .equiposMain .columnaparis {
     padding: 0;
   }
-  .containerparis1 {
+  .equiposMain .containerparis1 {
     padding: 0 !important;
   }
-  .desaparecer {
+  .equiposMain .desaparecer {
     display: none !important;
   }
-  .grid_listaEquipos {
+  .equiposMain .grid_listaEquipos {
     width: 100%;
   }
-  .clubesTituloInicio {
+  .equiposMain .clubesTituloInicio {
     width: 300px;
   }
-  .gridClubesNewells {
-    width: 100%;
+  .equiposMain .gridClubesNewells {
+    width: 320px;
   }
-  .gridClubesNewells .equipo {
+  .equiposMain .gridClubesNewells .messinewellscomienzo {
+    height: 320px;
+  }
+  .equiposMain .gridClubesNewells .equipo {
     font-size: 30px !important;
     width: 100px;
     margin: 0px;
   }
-  .gridClubesNewells .infonewells {
+  .equiposMain .gridClubesNewells .infonewells {
     padding-top: 10px;
   }
-  .gridClubesNewells .infonewells .textoNewells {
+  .equiposMain .gridClubesNewells .infonewells .textoNewells {
     font-size: 15px;
     text-align: justify;
   }
-  .newellsDiv {
+  .equiposMain .newellsDiv {
     flex-direction: column;
   }
-  .columnaTextoBarca {
+  .equiposMain .columnaTextoBarca {
     font-size: 15px;
   }
-  .columnaTextoBarca .messiClub2 {
+  .equiposMain .columnaTextoBarca .texto_leo {
+    padding: 10px;
+  }
+  .equiposMain .columnaTextoBarca .messiClub2 {
     height: 200px;
   }
-  .columnaTextoBarca .messiClub1 {
+  .equiposMain .columnaTextoBarca .messiClub1 {
     height: 200px;
   }
-  .textoBarca {
+  .equiposMain .textoBarca {
     font-size: 16px;
     font-style: normal;
   }
-  .messiFotosClubesBarca {
+  .equiposMain .messiFotosClubesBarca {
     display: none;
   }
-  .parisTitulo {
+  .equiposMain .parisTitulo {
     display: flex;
     justify-content: center;
   }
-  .containerparis {
+  .equiposMain .containerparis {
     flex-direction: column;
   }
-  .containerparis .texotParis {
-    font-size: 15px;
-    padding: 5px;
+  .equiposMain .containerparis .texto_leo {
+    font-size: 20px;
+    padding: 20px;
   }
-  .containerparis .fotosparis {
+  .equiposMain .containerparis .fotosparis {
     height: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     width: 280px;
   }
-  .containerparis .fotosparis .messijugandopsg {
+  .equiposMain .containerparis .fotosparis .messijugandopsg {
     height: 360px;
   }
-  .desaparecer {
+  .equiposMain .desaparecer {
     display: none;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .contactotitulo {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 150px;
+  }
+  .contactoDiv .formContacto {
+    padding: 40px;
+    height: auto;
+    width: 800px;
+  }
+  .contactoDiv .formContacto .contactoTitles {
+    font-size: 25px;
+  }
+  .contactoDiv .formContacto .inputsForm {
+    font-size: 25px;
+  }
+  .contactoDiv .formContacto .buttonForm {
+    font-size: 25px;
+    height: 80px;
   }
 }
 .contactotitulo {
   text-align: center;
+  font-size: 50px;
+  padding-bottom: 100px;
 }
 
-.contactoDiv {
+.imagenContacto {
+  background-color: #4a7cdf;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.imagenContacto .contactoDiv {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contactoDiv .formContacto {
+.imagenContacto .contactoDiv .formContacto {
   display: flex;
   flex-direction: column;
 }
-.contactoDiv .formContacto .contactoTitles {
+.imagenContacto .contactoDiv .formContacto .contactoTitles {
   font-weight: bolder;
 }
-.contactoDiv .formContacto .inputsForm {
+.imagenContacto .contactoDiv .formContacto .inputsForm {
   border-radius: 10px;
 }
-.contactoDiv .formContacto .buttonForm {
+.imagenContacto .contactoDiv .formContacto .buttonForm {
   transition-duration: 0.4s;
   border-radius: 10px;
   border: solid black 1px;
   padding: 5px;
   margin: 3px;
 }
-.contactoDiv .formContacto .buttonForm:hover {
+.imagenContacto .contactoDiv .formContacto .buttonForm:hover {
   background-color: #4a7cdf;
   color: white;
 }
 
+@media screen and (max-width: 1440px) {
+  .contactotitulo {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contactotitulo {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .contactotitulo {
+    text-align: center;
+    font-size: 17px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .contactotitulo {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .contactotitulo {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+}
 .cuerpo {
   animation-name: fade-in;
   animation-duration: 1s;
@@ -918,6 +1191,7 @@ a:hover:after {
 .info .imagenInfoGeneral {
   padding-top: 50px;
   height: 300px;
+  width: 300px;
 }
 
 .tituloCopaAmerica {
@@ -957,6 +1231,10 @@ a:hover:after {
   height: 400px;
 }
 
+.subtituloArgentina {
+  padding: 10px;
+}
+
 .messiArgentina {
   background-image: linear-gradient(135deg, #465EFB 0%, #3B2667 100%);
   display: flex;
@@ -965,8 +1243,6 @@ a:hover:after {
 }
 .messiArgentina .letraBlanca {
   color: beige;
-}
-.messiArgentina .subtituloArgentina {
   padding: 50px;
 }
 .messiArgentina .textoSeleccion {
@@ -1185,6 +1461,13 @@ a:hover:after {
     width: 320px;
     padding: 0;
   }
+  .copaAmerica {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 30px;
+  }
   .carouselSeleccion {
     width: 100%;
     margin: auto;
@@ -1241,8 +1524,8 @@ a:hover:after {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 30px;
-    height: 700px;
+    padding-left: 10px;
+    height: auto;
   }
   .copaAmerica .videoCopaAmerica {
     height: 300px;
@@ -1254,6 +1537,9 @@ a:hover:after {
     padding-right: 10px;
     display: flex;
     flex-direction: column;
+  }
+  .copaAmerica .informacionTextoSeleccion p {
+    padding: 10px;
   }
   .carouselSeleccion {
     width: 100% !important;
